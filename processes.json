@@ -1,6 +1,6 @@
 [{
     "name": "Api Cyza",
-    "cwd": "/root/cyza/api",
+    "cwd": "/root/node_login",
     "script": "app.js",
     "env": {
         "PORT": 80,

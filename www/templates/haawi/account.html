@@ -1,0 +1,222 @@
+<header class="page-header">
+    <h2>User Profile</h2>
+    <div class="right-wrapper pull-right">
+        <ol class="breadcrumbs">
+            <li>
+                <a href="index.html">
+                    <i class="fa fa-home"></i>
+                </a>
+            </li>
+            <li>
+                <span>Account</span>
+            </li>
+            <li>
+                <span>Profile</span>
+            </li>
+        </ol>
+        <a class="sidebar-right-toggle" data-open="sidebar-right">
+            <i class="fa fa-chevron-left"></i>
+        </a>
+    </div>
+</header>
+<!-- start: page -->
+<div class="row">
+    <div class="col-md-4 col-lg-3">
+        <section class="panel">
+            <div class="panel-body">
+                <div class="thumb-info mb-md">
+                    <img src="assets/images/!logged-user.jpg" ng-src="{{ user.pictureUrl  }}" alt="{{ user.firstName}}" class="rounded img-responsive" width="180">
+                    <div class="thumb-info-title">
+                        <span class="thumb-info-inner">{{ user.firstName }}</span>
+                        <span class="thumb-info-type">{{user.lastName}}</span>
+                    </div>
+                </div>
+                <div class="widget-toggle-expand mb-md">
+                    <div class="widget-header">
+                        <h6>Compleate profile</h6>
+                        <div class="widget-toggle">+</div>
+                    </div>
+                    <div class="widget-content-collapsed">
+                        <div class="progress progress-xs light">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="{{ user.average_rate }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ user.average_rate }}%;">
+                                {{ user.average_rate }}%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="dotted short">
+                <h6 class="text-muted">About me</h6>
+                <p>{{user.about}}</p>
+                <div class="clearfix">
+                    <a class="text-uppercase text-muted pull-right" href="#">(ver todos)</a>
+                </div>
+                <hr class="dotted short">
+                <div class="social-icons-list">
+                    <a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.facebook.com" data-original-title="Facebook">
+                        <i class="fa fa-facebook"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a rel="tooltip" data-placement="bottom" href="http://www.twitter.com" data-original-title="Twitter">
+                        <i class="fa fa-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                    <a rel="tooltip" data-placement="bottom" href="http://www.linkedin.com" data-original-title="Linkedin">
+                        <i class="fa fa-linkedin"></i>
+                        <span>Linkedin</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="panel">
+            <header class="panel-heading">
+                <div class="panel-actions">
+                    <a href="#" class="fa fa-caret-down"></a>
+                    <a href="#" class="fa fa-times"></a>
+                </div>
+                <h2 class="panel-title">
+                    <span class="label label-primary label-sm text-normal va-middle mr-sm">15</span>
+                    <span class="va-middle">Contact</span>
+                </h2>
+            </header>
+            <div class="panel-body">
+                <div class="content">
+                    <ul class="simple-user-list">
+                        <li>
+                            <figure class="image rounded">
+                                <img src="assets/images/!sample-user.jpg" alt="Joseph Doe Junior" class="img-circle">
+                            </figure>
+                            <span class="title">Joseph Doe Junior</span>
+                            <span class="message truncate">Lorem ipsum dolor sit.</span>
+                        </li>
+                        <li>
+                            <figure class="image rounded">
+                                <img src="assets/images/!sample-user.jpg" alt="Joseph Junior" class="img-circle">
+                            </figure>
+                            <span class="title">Joseph Junior</span>
+                            <span class="message truncate">Lorem ipsum dolor sit.</span>
+                        </li>
+                        <li>
+                            <figure class="image rounded">
+                                <img src="assets/images/!sample-user.jpg" alt="Joe Junior" class="img-circle">
+                            </figure>
+                            <span class="title">Joe Junior</span>
+                            <span class="message truncate">Lorem ipsum dolor sit.</span>
+                        </li>
+                        <li>
+                            <figure class="image rounded">
+                                <img src="assets/images/!sample-user.jpg" alt="Joseph Doe Junior" class="img-circle">
+                            </figure>
+                            <span class="title">Joseph Doe Junior</span>
+                            <span class="message truncate">Lorem ipsum dolor sit.</span>
+                        </li>
+                    </ul>
+                    <hr class="dotted short">
+                    <div class="text-right">
+                        <a class="text-uppercase text-muted" href="#">(VER TODOS)</a>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <div class="input-group input-search">
+                    <input type="text" class="form-control" name="q" id="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </section>
+       
+    </div>
+    <div class="col-md-8 col-lg-6">
+        <div class="tabs">
+            <ul class="nav nav-tabs tabs-primary">
+                <li class="active">
+                    <a tab="#overview" data-toggle="tab">Mi profile</a>
+                </li>
+                <li>
+                    <a tab="#edit" data-toggle="tab">Change Password</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                
+                <div id="edit" class="tab-pane active">
+                    <form class="form-horizontal" method="get">
+                        <h4 class="mb-xlg">Personal Information</h4>
+                        <fieldset>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="profileFirstName">First Name</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" id="profileFirstName" ng-model="user.firstName">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="profileLastName">Last Name</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" id="profileLastName" ng-model="user.lastName">
+                                </div>
+                            </div>
+                             <div class="form-group">
+                                <label class="col-md-3 control-label" for="profileAddress">Email</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" id="profileEmail" ng-model="user.email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="profileAddress">Address</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" id="profileAddress" ng-model="user.address">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="profileCompany">Company</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" id="profileCompany" ng-model="user.company">
+                                </div>
+                            </div>
+                        </fieldset>
+                        <hr class="dotted tall">
+                        <h4 class="mb-xlg">About Yourself</h4>
+                        <fieldset>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="profileBio">Biographical Info</label>
+                                <div class="col-md-8">
+                                    <textarea class="form-control" rows="3" id="profileBio" ng-model="user.about"></textarea>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <hr class="dotted tall">
+                        
+                        <div class="panel-footer">
+                            <div class="row">
+                                <div class="col-md-9 col-md-offset-3">
+                                    <button type="button" class="btn btn-primary" ng-click="updateUser()">Save</button>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="overview" class="tab-pane">
+                    <h4 class="mb-xlg">Change Password</h4>
+                        <fieldset class="mb-xl">
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="profileNewPassword">New Password</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" id="profileNewPassword">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="profileNewPasswordRepeat">Repeat New Password</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" id="profileNewPasswordRepeat">
+                                </div>
+                            </div>
+                        </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end: page -->

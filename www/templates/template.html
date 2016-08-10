@@ -1,0 +1,96 @@
+<header class="header">
+    <div class="logo-container">
+        <a href="../" class="logo">
+            <img src="assets/images/logo.png" height="35" alt="Haawi Admin" />
+        </a>
+        <div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
+            <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+        </div>
+    </div>
+    <!-- start: search & user box -->
+    <div class="header-right">
+        <form class="search nav-form">
+            <div class="input-group input-search">
+                <input type="text" class="form-control" name="q" id="q" placeholder="Search...">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+        </form>
+        <span class="separator"></span>
+        <div id="userbox" class="userbox">
+            <a href="#" data-toggle="dropdown">
+                <figure class="profile-picture">
+                    <img ng-src="{{ user.pictureUrl  }}" alt="{{ user.firstName }}" class="img-circle" data-lock-picture="assets/images/!logged-user.jpg" />
+                </figure>
+                <div class="profile-info" data-lock-name="John Doe" data-lock-email="johndoe@okler.com">
+                    <span class="name">{{ user.firstName }} {{user.lastName}}</span>
+                    <span class="role">{{ user.role | translate }}</span>
+                </div>
+                <i class="fa custom-caret"></i>
+            </a>
+            <div class="dropdown-menu">
+                <ul class="list-unstyled">
+                    <li class="divider"></li>
+                    <li>
+                        <a role="menuitem" tabindex="-1" href="#/main/account">
+                            <i class="fa fa-user"></i> My Profile</a>
+                    </li>
+                    <li>
+                        <a role="menuitem" tabindex="-1" ng-click="logout()">
+                            <i class="fa fa-power-off"></i> Exit</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- end: search & user box -->
+</header>
+<ion-side-menus>
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-light nav-title-slide-ios7">
+            <ion-nav-back-button class="button-clear"></ion-nav-back-button>
+        </ion-nav-bar>
+    </ion-side-menu-content>
+    <ion-side-menu side="left">
+        <ion-side-menu side="left">
+            <ion-content>
+                <div class="inner-wrapper">
+                    <!-- start: sidebar -->
+                    <aside id="sidebar-left" class="sidebar-left">
+                        <div class="sidebar-header">
+                            <div class="sidebar-title">
+                                Navigation
+                            </div>
+                            <div class="sidebar-toggle hidden-xs">
+                                <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+                            </div>
+                        </div>
+                        <div class="nano">
+                            <div class="nano-content">
+                                <nav id="menu" class="nav-main" role="navigation">
+                                    <ul class="nav nav-main">
+                                        <li>
+                                            <a href="#/main/account">
+                                                <i class="fa fa-user" aria-hidden="true"></i>
+                                                <span>Profile</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                <hr class="separator" />
+                            </div>
+                        </div>
+                    </aside>
+                    <!-- end: sidebar -->
+                    <section role="main" class="content-body">
+                        <ion-nav-view name="menuContent"></ion-nav-view>
+                        <!-- end: page -->
+                    </section>
+                </div>
+            </ion-content>
+            <!-- End sidemenu content -->
+        </ion-side-menu>
+</ion-side-menus>

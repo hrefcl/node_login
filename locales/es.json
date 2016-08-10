@@ -1,0 +1,23 @@
+{
+    "status_account": "Estado de la cuenta",
+    "active": "Activada",
+    "locked": "Bloqueada",
+    "delete": "Eliminada",
+    "suspended": "Suspendida",
+    "unverified": "Sin verificar",
+    "inactive": "Inactiva",
+    "hello": "Hola",
+    "shipping" : "envío ",
+    "post_txt": "Tiene un nuevo mensaje del ",
+    "reply_txt": "Tiene una repuesta a tu pregunta del ",
+    "offer_txt": "Tienes una nueva oferta del ",
+    "waiting_acceptance_txt" : "Han aceptado tu oferta para el ",
+    "waiting_acceptance_txt_extra" : ", debes aceptar tu oferta para completar el trato.",
+    "rejected_deal_txt" : "El transportista declinó su oferta del",
+    "finished_txt" : "Finalizado con éxito el envío ",
+    "awaiting_pickup_txt" : "Esta en espera de ser recogido el ",
+    "on_route_txt" : "Esta en camino de ser entregado tu ",
+    "waiting_confirmation_txt" : "Tu envío fue entregado, debes confirmar que fue entregado correctamente ",
+    "awaiting_confirmation_txt" : "Tu envío fue entregado, debes confirmar que fue entregado correctamente ",
+    "rating_txt" :"El envío fue confirmado, esta a la espera de calificación. "
+}

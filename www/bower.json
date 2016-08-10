@@ -1,0 +1,11 @@
+{
+  "name": "Haawi Admin",
+  "private": "true",
+  "dependencies": {
+    "moment": "^2.12.0",
+    "angular-moment": "^0.10.3",
+    "angular-translate": "^2.11.0",
+    "angular-translate-loader-static-files": "^2.11.0",
+    "angular-route": "^1.5.5"
+  }
+}

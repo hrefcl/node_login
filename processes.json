@@ -1,0 +1,11 @@
+[{
+    "name": "Api Cyza",
+    "cwd": "/root/cyza/api",
+    "script": "app.js",
+    "env": {
+        "PORT": 3000,
+        "NODE_ENV": "production",
+        "TZ": "America/Santiago"
+    },
+    "TZ": "America/Santiago"
+}]

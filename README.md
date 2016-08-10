@@ -34,6 +34,7 @@ Actualmente esta funcionando en un CENTOS 7
 >     sudo yum -y install ncurses-devel
 >     sudo yum -y install gcc-c++ openssl-devel
 >	  sudo yum -y install libpng libjpeg libpng-devel libjpeg-devel ghostscript libtiff libtiff-devel freetype freetype-devel jasper jasper-devel
+>	  sudo yum install -y mongodb-org
 >     cd /opt
 >     sudo wget --no-check-certificate https://www.python.org/ftp/python/2.7.6/Python-2.7.6.tar.xz
 >     sudo tar xf Python-2.7.6.tar.xz

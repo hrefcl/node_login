@@ -31,7 +31,6 @@ app.path = require('path');
 app.cors = require('cors');
 app.os = require('os');
 app.fs = require('fs');
-app.vhost = require('vhost');
 app.passport = require("passport");
 app.Mandrill = require('mandrill-api/mandrill');
 app.mandrill = new app.Mandrill.Mandrill('gNpSiXpdNFfIdIvG_cChuQ');

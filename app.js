@@ -32,14 +32,9 @@ app.cors = require('cors');
 app.os = require('os');
 app.fs = require('fs');
 app.passport = require("passport");
-app.Mandrill = require('mandrill-api/mandrill');
-app.mandrill = new app.Mandrill.Mandrill('gNpSiXpdNFfIdIvG_cChuQ');
-
-//{"_id":"57aa14d527f1fb4129504949","firstName":"Francisco","lastName":"Arenas Ampuero","pictureUrl":"https://media.licdn.com/mpr/mprx/0_0ZhWN9mQIlZxSgLG1d4WK62Qo9qxHpQ7smnWlGCQI-KOH2BmUsNHyTiQmPExefB_9dVksG265-sYwZVYzILvyGDoh-s0w41CnILEBi4FI17PTaHOVsPXcB998b8fG4kP0eT5rlzDckz","publicProfileUrl":"https://www.linkedin.com/in/franciskoarenas","id_linkedin":"rjBb1teqzL","__v":0}
 
 require('./lib/util')(app, express);
 require('./config')(app, express);
-require('./mandrill/mandrill')(app, express);
 
 
 var authenticate = require('./authentication')(app);
